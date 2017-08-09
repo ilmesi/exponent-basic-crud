@@ -1,7 +1,8 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
+import navigation from './navigation';
 
 const applicationReducers = {
-  removeThisReducerOnceYouAddALegitOne: () => ({}),
+  navigation
 };
 
 export default function createReducer() {

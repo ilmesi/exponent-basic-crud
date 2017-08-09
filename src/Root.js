@@ -1,11 +1,11 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import App from './components/App'
+import RootNavigation from './RootNavigation';
 
 const Root = (store) => (
   <Provider store={store}>
-    <App />
+    <RootNavigation />
   </Provider>
-)
+);
 
 export default Root;
