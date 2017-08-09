@@ -2,12 +2,9 @@ import { NavigationActions } from 'react-navigation';
 import * as ActionTypes from '../actions';
 import { AppNavigator } from '../RootNavigation';
 
-const firstAction = AppNavigator.router.getActionForPathAndParams('Main');
-const tempNavState = AppNavigator.router.getStateForAction(firstAction);
-const secondAction = AppNavigator.router.getActionForPathAndParams('Login');
+const loginAction = AppNavigator.router.getActionForPathAndParams('Login');
 const initialNavState = AppNavigator.router.getStateForAction(
-  secondAction,
-  tempNavState
+  loginAction
 );
 
 const navigationReducer = (state = initialNavState, action) => {
