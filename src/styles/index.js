@@ -6,7 +6,11 @@ export const detailStyles = StyleSheet.create({
     flex: 1
   },
   detailHeader: {
-    alignSelf: 'center'
+    backgroundColor: 'white',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   detailHeaderLogo: {
     width: 80
@@ -24,12 +28,12 @@ export const detailStyles = StyleSheet.create({
   detailSubtitle: {
     color: '#9E9E9E',
     paddingLeft: 10,
+    marginBottom: 10,
   },
   detailSubList: {
     marginTop: 40,
   },
   detailList: {
-    marginTop: 20,
     padding: 10,
     backgroundColor: '#FFF',
     borderColor: '#EEEEEE',
