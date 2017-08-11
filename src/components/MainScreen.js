@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import {
-  Text, View, ListView
+  Text, View, ListView, TouchableOpacity
 } from 'react-native';
+import * as ActionTypes from '../actions';
 import Icon from 'react-native-vector-icons/Ionicons';
 import ActionButton from 'react-native-action-button';
 import { listStyles as styles } from '../styles';
 
 export default class MainScreen extends Component {
   render() {
+    const { navigation } = this.props;
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     const dataSource = ds.cloneWithRows([
       {id: 1, title: 'Row 1 title', description: 'A very long row 1 description', created: '1 min ago'},
@@ -23,11 +25,14 @@ export default class MainScreen extends Component {
           dataSource={dataSource}
           renderRow={
             (rowData) => (
-              <View style={styles.listRow}>
-                <Text style={styles.listRowTitle}>{rowData.title}</Text>
-                <Text style={styles.listRowSubtitle}>{rowData.description}</Text>
-                <Text style={styles.listRowDate}>{rowData.created}</Text>
-              </View>
+              <TouchableOpacity
+                onPress={() => navigation.dispatch(ActionTypes.fetchItem())}>
+                <View style={styles.listRow}>
+                  <Text style={styles.listRowTitle}>{rowData.title}</Text>
+                  <Text style={styles.listRowSubtitle}>{rowData.description}</Text>
+                  <Text style={styles.listRowDate}>{rowData.created}</Text>
+                </View>
+              </TouchableOpacity>
             )
           }
         />

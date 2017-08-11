@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import {
-  Image, Text, TextInput, View, Button,
-  TouchableOpacity
+  Image, Text, TextInput, View, Button, TouchableOpacity
 } from 'react-native';
 import * as ActionTypes from '../actions';
 import styles from '../styles';
 import logo from '../../assets/icons/app-logo.png';
 
-export default class Login extends Component {
+export default class LoginScreen extends Component {
   render() {
     const { navigation } = this.props;
     return (
-      <View>
+      <View style={styles.loginContainer}>
         <View style={styles.logoWrapper}>
           <Image source={logo} style={styles.logo} resizeMode='contain' />
         </View>

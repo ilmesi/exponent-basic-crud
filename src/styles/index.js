@@ -1,5 +1,65 @@
 import { StyleSheet } from 'react-native';
 
+export const detailStyles = StyleSheet.create({
+  detailContainer: {
+    backgroundColor: '#F5F5F5',
+    flex: 1
+  },
+  detailHeader: {
+    alignSelf: 'center'
+  },
+  detailHeaderLogo: {
+    width: 80
+  },
+  infoIcon: {
+    fontSize: 20,
+    height: 20,
+    color: 'black',
+  },
+  infoRow: {
+    height: 40,
+    backgroundColor: 'green',
+    padding: 10
+  },
+  detailSubtitle: {
+    color: '#9E9E9E',
+    paddingLeft: 10,
+  },
+  detailSubList: {
+    marginTop: 40,
+  },
+  detailList: {
+    marginTop: 20,
+    padding: 10,
+    backgroundColor: '#FFF',
+    borderColor: '#EEEEEE',
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+  },
+  detailRow: {
+    height: 40,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  },
+  detailIcon: {
+    fontSize: 20,
+    height: 22,
+    color: '#AAA',
+  },
+  detailValue: {
+    marginLeft: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    flex: 1
+  },
+  detailValueBorder: {
+    borderBottomWidth: 1,
+    borderColor: '#EEEEEE',
+  }
+});
+
 export const listStyles = StyleSheet.create({
   listContainer: {
     backgroundColor: 'white',
@@ -43,6 +103,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'space-around'
   },
+  loginContainer: {
+    backgroundColor: 'white',
+    flex: 1
+  },
   logoWrapper: {
     alignSelf: 'center'
   },
@@ -53,7 +117,7 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   button: {
-    paddingVertical: 20,
+    paddingVertical: 30,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',

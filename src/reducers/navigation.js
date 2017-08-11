@@ -14,6 +14,11 @@ const navigationReducer = (state = initialNavState, action) => {
         NavigationActions.navigate({ routeName: 'Main' }),
         state
       );
+    case ActionTypes.FETCH_ITEM:
+      return AppNavigator.router.getStateForAction(
+        NavigationActions.navigate({ routeName: 'Detail' }),
+        state
+      );
     default:
       return AppNavigator.router.getStateForAction(action, state);
   }
